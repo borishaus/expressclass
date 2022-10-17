@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
     res.send("hello from my app");
 });
 
-//tells to listen on port 3000
+//tells to listen on port 3000000
 app.listen(3000,()=>{
     console.log(`listening on port ${chalk.green('3000')}` );
 });
