@@ -5,14 +5,16 @@ const morgan = require('morgan'); // this logs web traffic lots of different thi
 const path = require('path');
 const app = express();
 const PORT =process.env.PORT || 3000;
-app.use(morgan('tiny'));
-/* express . static handles static. path is part of node but needs to be called. 
-will shwo index.html before ln 14 because it is called index.html.*/
+app.use(morgan('tiny'));//tiny
 app.use(express.static(path.join(__dirname,'/public/'))); 
+//telling ejs where the templates will be
+app.set('views','./src/views');
+app.set('view engine', 'ejs');
+
 
 //req res sends to port
 app.get('/',(req,res)=>{
-    res.send("hello from my app");
+    res.render('index',{title:'Welcome to Globomantics',data:['a','b','c']});
 });
 
 //tells to listen on port 3000
