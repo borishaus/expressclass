@@ -121,18 +121,17 @@
 
     <section class="sec_include">
       <div class="container">
+
         <% sessions.map((session)=>{%>
-          <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
-  
-  
+
               <h3><%=session.title%></h3>
               <p><%=session.description%></p>
               
+                <a href="#" class="btn-oval">Learn More</a>
+
             </div>
-  
-          </div>
-          <%}) %>
+        <% }) %>
         
       </div>
     </section>
@@ -150,7 +149,7 @@
             <ul class="quick-links col-md-4 col-xs-6">
 
               <li><a href="our-story.html">Our Story</a></li>
-              <li><a href="sessions">Sessions</a></li>
+              <li><a href="#">Brands</a></li>
               <li><a href="robotics.html">Robotics</a></li>
               <li><a href="media.html">Media</a></li>
               <li><a href="#">Support</a></li>
