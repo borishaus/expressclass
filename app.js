@@ -1,9 +1,11 @@
 // sets up express app
 const express = require('express');
 const chalk=require("chalk");
-//const debug = require('debug')('app');
+const morgan = require('morgan'); // this logs web traffic lots of different things you can pass into morgan
+
 const app = express();
 //const chalky = chalk();
+app.use(morgan('tiny'));
 
 
 //req res sends to port
