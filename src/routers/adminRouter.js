@@ -6,6 +6,7 @@ const sessions = require('../data/sessions.json');
 adminRouter.route('/').get((req,res)=>{
     const url= 'mongodb+srv://boris:1234@globomantics.esl9twf.mongodb.net/?retryWrites=true&w=majority';
     const dbName ='globomantics';
+    
 
     (async function mongo(){
         let client;
